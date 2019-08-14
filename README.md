@@ -36,8 +36,18 @@ Data files are organized within the directories below
 data/redshift/Run x - RNG y/files
 ```
 ## Training the Network
+After navigating to /src in terminal, the following line will initiate the training of a new network.
+
 ```
 python train.py sweep-10
 ```
 
 The first command after the filename specifies the desired input maps. The target map is set in config.py.
+
+## Generating New Transformed Files
+**fourier.py** offers three types of transformations which may be applied to existing 21cm boxes. These are **sweep**, **gaussian**, and **bar**. **sweep** is representative of "The Wedge", **gaussian** multiplies the map's Fourier profile by a Gaussian distribution, and **bar** removes a bar of a specified width in Fourier space.
+
+To generate a transformed file from an existing data file, edit the main method of **fourier.py** to perform the transformation you desire. To perform a certain transformation, then set that argument to **True** in the main method. Each method has a corresponding variable which needs to be set before running, so set that as well. Then, navigate to /data in terminal and run the following line.
+```
+python fourier.py
+```
