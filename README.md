@@ -31,6 +31,7 @@ A Convolutional Neural Network for recovering 21cm intensity information lost to
 * **cleaner.py** - Removes files of a specified extension from database.
 
 ## Folders in data
+Data files are organized within the directories below
 ```
 data/redshift/Run x - RNG y/files
 ```
