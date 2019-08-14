@@ -2,7 +2,7 @@
 
 A Convolutional Neural Network for recovering 21cm intensity information lost to "The Wedge".
 
-## DEPENDENCIES
+## Dependencies
 * **python** >= 3.5
 * **numpy**
 * **scipy**
@@ -10,7 +10,7 @@ A Convolutional Neural Network for recovering 21cm intensity information lost to
 * **pytorch**
 * **cuda** for GPU. The program will automatically use it if available.
 
-## FILES_in_src
+## Files in src
 * **config.py** - Contains the settings on variables relevant to the rest of the code. This should be the only file you need to edit to run the code.
 
 * **model_def.py** - The definition of the network model.
@@ -25,6 +25,15 @@ A Convolutional Neural Network for recovering 21cm intensity information lost to
 
 * **verification.py** - Used in train.py to compute validation loss, and may be called on its own to calculate the validation loss on a pre-trained network.
 
-## TO_TRAIN_THE_NETWORK
+## Files in data
+* **fourier.py** - Applies wedge effects to data stored in the folder.
+
+* **cleaner.py** - Removes files of a specified extension from database.
+
+## Folders in data
+data/redshift/Run x - RNG y/files
+
+## Training the Network
 python train.py sweep-10
+
 The first command after the filename specifies the desired input maps. The target map is set in config.py.
