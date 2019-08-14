@@ -1,4 +1,4 @@
-# 21cm Wedge Recovery
+# 21cm Wedge Remover
 
 A Convolutional Neural Network for recovering 21cm intensity information lost to "The Wedge".
 
