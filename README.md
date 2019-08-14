@@ -3,7 +3,7 @@
 A Convolutional Neural Network for recovering 21cm intensity information lost to "The Wedge".
 
 ## Dependencies
-* **python** >= 3.5
+* **python** version 3.5 or more recent
 * **numpy**
 * **scipy**
 * **matplotlib**
@@ -42,7 +42,7 @@ After navigating to /src in terminal, the following line will initiate the train
 python train.py sweep-10
 ```
 
-The first command after the filename specifies the desired input maps. The target map is set in config.py.
+The first command after the filename specifies the desired input maps. This argument is either **none** or **x-y**, where **x** specifies the type of transformation and **y** specifies the value of the variable associated with that transormation. See **fourier.py** for more information on the transformation types. The target map is set in config.py.
 
 ## Generating New Transformed Files
 **fourier.py** offers three types of transformations which may be applied to existing 21cm boxes. These are **sweep**, **gaussian**, and **bar**. **sweep** is representative of "The Wedge", **gaussian** multiplies the map's Fourier profile by a Gaussian distribution, and **bar** removes a bar of a specified width in Fourier space.
