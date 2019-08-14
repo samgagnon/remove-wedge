@@ -31,9 +31,12 @@ A Convolutional Neural Network for recovering 21cm intensity information lost to
 * **cleaner.py** - Removes files of a specified extension from database.
 
 ## Folders in data
+```
 data/redshift/Run x - RNG y/files
-
+```
 ## Training the Network
+```
 python train.py sweep-10
+```
 
 The first command after the filename specifies the desired input maps. The target map is set in config.py.
